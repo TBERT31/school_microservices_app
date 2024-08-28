@@ -30,39 +30,37 @@ This project is a school management application built using a microservices arch
 
 2. **Set up PostgreSQL databases**:
 
-Create two PostgreSQL databases, one for each microservice.
-Update the `application.properties` files in each microservice to point to the correct databases. 
-For example:
-properties
-   ```bash
+   Create two PostgreSQL databases, one for each microservice.  
+   Update the `application.properties` files in each microservice to point to the correct databases.  
+   For example:
+   ```properties
    spring.datasource.url=jdbc:postgresql://localhost:5432/your_database_name
    spring.datasource.username=your_username
    spring.datasource.password=your_password
 
 3. **Start the Eureka server**:
 
-Navigate to the eureka-server directory.
-Build and run the server:
-```bash
-mvn clean install
-mvn spring-boot:run
+   Navigate to the `eureka-server` directory.  
+   Build and run the server:
+   ```bash
+   mvn clean install
+   mvn spring-boot:run
 
 4. **Start the microservices**:
 
-For each microservice (e.g., student-service and course-service), navigate to its respective directory and run the following commands:
-```bash
-mvn clean install
-mvn spring-boot:run
+   For each microservice (e.g., `student-service` and `course-service`), navigate to its respective directory and run the following commands:
+   ```bash
+   mvn clean install
+   mvn spring-boot:run
 
 5. **Start Zipkin**:
 
-To start Zipkin, you can use Docker:
-```bash
-docker run -d -p 9411:9411 openzipkin/zipkin
-Alternatively, you can start Zipkin manually by following the instructions on their official website.
+   To start Zipkin, you can use Docker:
+   ```bash
+   docker run -d -p 9411:9411 openzipkin/zipkin
 
 6. **Access the application**:
 
-The microservices are accessible via their respective ports configured in the application.properties files.
-You can check the status of the services on the Eureka dashboard available at: http://localhost:8761/.
-Zipkin is accessible at: http://localhost:9411/.
+   The microservices are accessible via their respective ports configured in the `application.properties` files.  
+   You can check the status of the services on the Eureka dashboard available at: `http://localhost:8761/`.  
+   Zipkin is accessible at: `http://localhost:9411/`.
