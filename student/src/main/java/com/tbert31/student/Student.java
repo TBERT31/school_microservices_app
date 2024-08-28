@@ -1,6 +1,7 @@
 package com.tbert31.student;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.*;
 
@@ -13,6 +14,7 @@ import lombok.*;
 public class Student {
 
     @Id
+    @GeneratedValue
     private Integer id;
     private String firstname;
     private String lastname;

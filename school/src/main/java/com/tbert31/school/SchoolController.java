@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/students")
+@RequestMapping("/api/v1/schools")
 @RequiredArgsConstructor
 public class SchoolController {
 
@@ -24,6 +24,13 @@ public class SchoolController {
 
     @GetMapping
     public ResponseEntity<List<School>> findAllSchools(){
+        return ResponseEntity.ok(service.findAllSchools());
+    }
+
+    @GetMapping("/with-students/{school-id}")
+    public ResponseEntity<List<School>> findAllSchools(
+            @PathVariable("school-id") Integer schoolId
+    ){
         return ResponseEntity.ok(service.findAllSchools());
     }
 }
