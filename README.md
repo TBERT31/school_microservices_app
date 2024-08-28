@@ -4,7 +4,7 @@
 
 ## Description
 
-This project is a school management application built using a microservices architecture with Spring Boot and Spring Cloud. It employs an Eureka server for service discovery and Zipkin for distributed tracing. The application operates with two PostgreSQL databases, each associated with a different microservice.
+This project is a school management BACKEND application built using a microservices architecture with Spring Boot and Spring Cloud. It employs an Eureka server for service discovery and Zipkin for distributed tracing. The application operates with two PostgreSQL databases, each associated with a different microservice.
 
 ### Key Features:
 - **Spring Boot**: The primary framework used for developing the microservices.
