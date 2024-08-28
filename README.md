@@ -28,38 +28,40 @@ This project is a school management application built using a microservices arch
    git clone https://github.com/TBERT31/school_microservices_app.git
    cd school_microservices_app
 
-1. **Set up PostgreSQL databases**:
+2. **Set up PostgreSQL databases**:
 
 Create two PostgreSQL databases, one for each microservice.
-Update the application.properties files in each microservice to point to the correct databases. For example:
+Update the `application.properties` files in each microservice to point to the correct databases. 
+For example:
 properties
-Copier le code
-spring.datasource.url=jdbc:postgresql://localhost:5432/your_database_name
-spring.datasource.username=your_username
-spring.datasource.password=your_password
-Start the Eureka server:
+   ```bash
+   spring.datasource.url=jdbc:postgresql://localhost:5432/your_database_name
+   spring.datasource.username=your_username
+   spring.datasource.password=your_password
+
+3. **Start the Eureka server**:
 
 Navigate to the eureka-server directory.
 Build and run the server:
-bash
-Copier le code
+```bash
 mvn clean install
 mvn spring-boot:run
-Start the microservices:
+
+4. **Start the microservices**:
 
 For each microservice (e.g., student-service and course-service), navigate to its respective directory and run the following commands:
-bash
-Copier le code
+```bash
 mvn clean install
 mvn spring-boot:run
-Start Zipkin:
+
+5. **Start Zipkin**:
 
 To start Zipkin, you can use Docker:
-bash
-Copier le code
+```bash
 docker run -d -p 9411:9411 openzipkin/zipkin
 Alternatively, you can start Zipkin manually by following the instructions on their official website.
-Access the application:
+
+6. **Access the application**:
 
 The microservices are accessible via their respective ports configured in the application.properties files.
 You can check the status of the services on the Eureka dashboard available at: http://localhost:8761/.
