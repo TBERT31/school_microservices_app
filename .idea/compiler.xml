@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
         <module name="student" />
+        <module name="school" />
         <module name="gateway" />
         <module name="discovery" />
       </profile>
@@ -18,6 +19,7 @@
       <module name="config-server" options="-parameters" />
       <module name="discovery" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="school" options="-parameters" />
       <module name="student" options="-parameters" />
     </option>
   </component>
